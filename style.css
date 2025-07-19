@@ -1,0 +1,242 @@
+@charset "UTF-8";
+html {
+    font-size: 100%;
+}
+body{
+  background-color: #fffeee;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-family: "ヒラギノ角ゴ ProN" , sans-serif ;
+}
+h1{
+  color: #00bbdd;
+  font-size: 2rem;
+}
+
+h2{
+  font-size: 1.5rem;
+}
+
+p{
+  font-size: 1rem;
+  text-align: justify;
+}
+ol li{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+ul li{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h1{
+  color: #fff;
+  background-color: #114400;
+  margin: 10px 0 10px 0;
+  padding: 15px;
+  border: 9px solid #a60;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px #666, 2px 2px 2px #111 inset;
+  text-shadow: 0px 0px 2px #000;
+  line-height: 1.9;
+}
+
+ul.navi{
+  display:flex;
+  list-style: none;
+  padding-left:0px;
+  margin-bottom: 0px;
+
+}
+
+ul.navi li{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0px;
+  /*background-image: url("harigami.png");
+  background-position: left top;	background-repeat: no-repeat;	background-size: cover;*/
+  background: #f4f4f4;
+    border-left: solid 6px #5bb7ae;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+    border-collapse:separate;
+}
+
+ul.navi li + li{
+  border-left:none;
+}
+
+ul.navi li a{
+  text-decoration: none;
+  display: block;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+}
+
+ul.navi li a:hover {
+	background-color:#59ee59; 	/*リンクにマウスが乗ったら背景色を変更する*/
+}
+
+div.contents{
+  padding-left: 1em;
+  margin-top:1em;
+  border:ridge 10px #f0f8ff;
+}
+
+.navi .this_page li{
+  border:ridge 5px #f0f8ff;
+}
+
+
+/*class style*/
+
+.resizeimage img{
+  width: 70%;
+}
+
+/*768px～はflexを適用させる*/
+@media screen and (min-width: 768px) {
+	.content_layout{
+		display: flex;
+  }
+  .resizeimage{
+    flex-basis: 60%; 
+  }
+
+  .resizeimage img{
+    width: 50%;
+  }
+}
+
+ @media ( max-width : 700px ){
+   .grid {
+     grid-template-columns: 1fr;
+   }
+   .side,
+   .list {
+     order: 0;
+   }
+ }
+
+.gridemail {
+  display: grid;
+  align-items: baseline;
+  gap: 1em;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media ( max-width : 700px ){
+  .gridemail {
+    grid-template-columns: 1fr;
+  }
+  .first,
+  .second,
+  .third,
+  .list {
+    order: 0;
+  }
+}
+
+
+.gridcv {
+  display: grid;
+  gap: 0em;
+  grid-template-columns: 8em 1fr;
+}
+@media ( max-width : 700px ){
+  .gridecv {
+    grid-template-columns: 1fr;
+  }
+  .cvfirst,
+  .cvsecond,
+  .list {
+    order: 0;
+  }
+}
+
+
+.col-1 {
+    display: inline-block;
+    width: 100px;
+    /* border: solid 1px; */
+}
+.col-2 {
+    display: inline-block;
+    width: 500px;
+    /* border: solid 1px; */
+}
+
+
+
+
+
+.cv {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.cvclass {
+  margin-bottom: 1rem;
+}
+
+.cvul {
+  list-style: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.cvp {
+  list-style: none;
+  margin-top: 1.4em;
+  margin-bottom: 1em;
+}
+
+.lp {
+  font-weight: lighter
+}
+
+.space0l {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+.space0r {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: right;
+}
+
+ul.content_text{
+  list-style: none;
+}
+
+.content_text li{
+  margin-left: 1em;
+  text-indent: -1em;
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+.text_right{
+  text-align: right;
+  padding: 0.5em;
+}
+
+@media ( max-width : 700px ){
+  .space0r {
+    text-align: left;
+  }
+}
+
+
+
+
+
+/*ID style*/
+
+#topname{
+  margin-bottom: 2rem;
+}
