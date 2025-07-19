@@ -1,242 +1,233 @@
-@charset "UTF-8";
-html {
-    font-size: 100%;
-}
-body{
-  background-color: #fffeee;
-  margin-top: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  font-family: "ヒラギノ角ゴ ProN" , sans-serif ;
-}
-h1{
-  color: #00bbdd;
-  font-size: 2rem;
+/* 全体の基本スタイル */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-h2{
-  font-size: 1.5rem;
-}
-
-p{
-  font-size: 1rem;
-  text-align: justify;
-}
-ol li{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-ul li{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-h1{
-  color: #fff;
-  background-color: #114400;
-  margin: 10px 0 10px 0;
-  padding: 15px;
-  border: 9px solid #a60;
-  border-radius: 3px;
-  box-shadow: 2px 2px 4px #666, 2px 2px 2px #111 inset;
-  text-shadow: 0px 0px 2px #000;
-  line-height: 1.9;
-}
-
-ul.navi{
-  display:flex;
-  list-style: none;
-  padding-left:0px;
-  margin-bottom: 0px;
-
-}
-
-ul.navi li{
-  width: 100%;
+/* ヘッダー */
+header {
+  background: linear-gradient(to bottom, #371348, #683e8b);
+  color: #ffffffd9;
+  padding: 40px 0;
   text-align: center;
-  margin-bottom: 0px;
-  /*background-image: url("harigami.png");
-  background-position: left top;	background-repeat: no-repeat;	background-size: cover;*/
-  background: #f4f4f4;
-    border-left: solid 6px #5bb7ae;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
-    border-collapse:separate;
 }
 
-ul.navi li + li{
-  border-left:none;
+header h1 {
+  margin: 0;
+  font-size: 2em;
 }
 
-ul.navi li a{
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px; /* ナビゲーションリンクの間隔を広げる */
+}
+
+nav ul li a {
+  color: #fff;
   text-decoration: none;
-  display: block;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  font-size: 1.2em; /* ナビゲーションリンクのフォントサイズを大きくする */
   font-weight: bold;
+  padding: 5px 10px; /* パディングを追加してホバーエリアを広げる */
+  border-radius: 4px; /* 角を丸める */
+  transition: background-color 0.3s, color 0.3s; /* スムーズなトランジションを追加 */
 }
 
-ul.navi li a:hover {
-	background-color:#59ee59; 	/*リンクにマウスが乗ったら背景色を変更する*/
+nav ul li a:hover {
+  color: #333; /* ホバー時の文字色を設定 */
+  background-color: #fff; /* ホバー時の背景色を設定 */
 }
 
-div.contents{
-  padding-left: 1em;
-  margin-top:1em;
-  border:ridge 10px #f0f8ff;
+/* メインビジュアル */
+.main-visual {
+  background-color: #d0d0d0; /* より落ち着いた色 */
+  color: #333;
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ccc; /* 軽いボーダーを追加 */
 }
 
-.navi .this_page li{
-  border:ridge 5px #f0f8ff;
+.main-visual p {
+  font-size: 1em; /* 通常のフォントサイズ */
+  margin: 0;
 }
 
-
-/*class style*/
-
-.resizeimage img{
-  width: 70%;
+/* 概要 */
+.overview {
+  padding: 20px 20px;
+  /* background-color: #e0f7fa; 薄い水色 */
+  /* color: #333; 文字色をダークグレーに変更 */
+  background-color: #fff;
+  text-align: left;
+  border-bottom: 1px solid #ccc; /* 横線を追加 */
 }
 
-/*768px～はflexを適用させる*/
-@media screen and (min-width: 768px) {
-	.content_layout{
-		display: flex;
-  }
-  .resizeimage{
-    flex-basis: 60%; 
-  }
-
-  .resizeimage img{
-    width: 50%;
-  }
-}
-
- @media ( max-width : 700px ){
-   .grid {
-     grid-template-columns: 1fr;
-   }
-   .side,
-   .list {
-     order: 0;
-   }
- }
-
-.gridemail {
-  display: grid;
-  align-items: baseline;
-  gap: 1em;
-  grid-template-columns: 1fr 2fr;
-}
-
-@media ( max-width : 700px ){
-  .gridemail {
-    grid-template-columns: 1fr;
-  }
-  .first,
-  .second,
-  .third,
-  .list {
-    order: 0;
-  }
-}
-
-
-.gridcv {
-  display: grid;
-  gap: 0em;
-  grid-template-columns: 8em 1fr;
-}
-@media ( max-width : 700px ){
-  .gridecv {
-    grid-template-columns: 1fr;
-  }
-  .cvfirst,
-  .cvsecond,
-  .list {
-    order: 0;
-  }
-}
-
-
-.col-1 {
-    display: inline-block;
-    width: 100px;
-    /* border: solid 1px; */
-}
-.col-2 {
-    display: inline-block;
-    width: 500px;
-    /* border: solid 1px; */
-}
-
-
-
-
-
-.cv {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.cvclass {
-  margin-bottom: 1rem;
-}
-
-.cvul {
+.overview ul {
   list-style: none;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  padding: 0;
+  margin: 0;
 }
 
-.cvp {
-  list-style: none;
-  margin-top: 1.4em;
-  margin-bottom: 1em;
+.overview ul li {
+  font-size: 1em; /* 通常のフォントサイズ */
+  margin-bottom: 10px;
 }
 
-.lp {
-  font-weight: lighter
+
+/* 参加申し込み */
+.application {
+  /* background-color: #e9ecef; */
+  background-color: #fff;
+  padding: 20px 20px;
+  text-align: left;
+  border-bottom: 1px solid #ccc; /* 横線を追加 */
 }
 
-.space0l {
-  margin-top: 0px;
-  margin-bottom: 0px;
+.application h2 {
+  font-size: 1.5em; /* 小さめのフォントサイズ */
+  margin-bottom: 20px;
+}
+
+.application p {
+  font-size: 1em; /* 通常のフォントサイズ */
+}
+
+/* サポート */
+.support {
+  padding: 20px 20px;
+  background-color: #fff;
   text-align: left;
 }
 
-.space0r {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  text-align: right;
+.support h2 {
+  font-size: 1.5em; /* 小さめのフォントサイズ */
+  margin-bottom: 20px;
 }
 
-ul.content_text{
+.support p {
+  font-size: 1em; /* 通常のフォントサイズ */
+}
+
+.support ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.content_text li{
-  margin-left: 1em;
-  text-indent: -1em;
-  margin-top:1em;
-  margin-bottom:1em;
+.support ul li {
+  font-size: 1em; /* 通常のフォントサイズ */
+  margin-bottom: 10px;
 }
 
-.text_right{
+/* フッター */
+footer {
+  background: linear-gradient(to bottom, #562c78, #371348);
+  color: #fff;
+  padding: 20px;
   text-align: right;
-  padding: 0.5em;
 }
 
-@media ( max-width : 700px ){
-  .space0r {
-    text-align: left;
-  }
+footer p {
+  margin: 5px 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
 }
 
 
+/* プログラムpdf */
+.programpdf {
+  background-color: #d0d0d0; /* より落ち着いた色 */
+  color: #333;
+  padding: 20px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ccc; /* 軽いボーダーを追加 */
+}
+
+.programpdf p {
+  font-size: 1em; /* 通常のフォントサイズ */
+  margin: 0;
+}
 
 
+/* プログラム */
+.program {
+  /* background-color: #e9ecef; */
+  background-color: #fff;
+  padding: 20px 20px;
+  text-align: left;
+  border-bottom: 1px solid #ccc; /* 横線を追加 */
+}
 
-/*ID style*/
+.program h2 {
+  font-size: 1.5em; /* 小さめのフォントサイズ */
+  margin-bottom: 20px;
+}
 
-#topname{
-  margin-bottom: 2rem;
+.program p {
+  font-size: 1em; /* 通常のフォントサイズ */
+}
+
+/* 外側のリストの間隔を広げる */
+.program ul > li {
+  font-size: 1em; /* 通常のフォントサイズ */
+  margin-bottom: 20px; /* 外側のリスト項目の間隔を広げる */
+}
+
+/* 内側のリストのスタイル */
+.program ul ul li {
+  margin-bottom: 0px; /* 内側のリストの間隔を狭くする */
+}
+
+
+/* アクセス */
+.access {
+  padding: 20px 20px;
+  background-color: #fff;
+  text-align: left;
+}
+
+.access h2 {
+  font-size: 1.5em; /* 小さめのフォントサイズ */
+  margin-bottom: 20px;
+}
+
+.access p {
+  font-size: 1em; /* 通常のフォントサイズ */
+}
+
+.access ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.access ul li {
+  font-size: 1em; /* 通常のフォントサイズ */
+  margin-bottom: 10px;
 }
