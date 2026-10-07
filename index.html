@@ -1,6 +1,6 @@
 <!doctype html>
-<htmi lang="en">
-  <head>
+<html lang="en">
+<head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172982323-1"></script>
     <script>
@@ -16,75 +16,50 @@
     <title>Shinya Kumashiro - Osaka Institute of Technology, Mathematics</title>
     <meta name="description" content="Shinya Kumashiro - Osaka Institute of Technology, Mathematics (Commutative algebra).
     Key Words: Cohen-Macaulay ring, canonical module, Hilbert function, Gorenstein ring, trace ideal">
-    <link rel="stylesheet" href="style.css?20210125">
-  </head>
-
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="style.css?20261006-2"><meta http-equiv="refresh" content="0; url=cv.html"><link rel="canonical" href="https://skumashiro.github.io/cv.html"></head>
+<body>
+<header class="site-header">
+  <div class="site-identity">
     <h1 id="topname">Shinya Kumashiro</h1>
-
-    <p>
-		Welcome to Shinya Kumashiro's home page!
-
-    </p>
-
-	<ul class="navi">
-		<li class="this_page"><a href="index.html">TOP</a>
-		<li><a href="cv.html">CV</a>
-		<li><a href="paper.html">Papers and Books</a>
-		<!--  <li><a href="preprint.html">Preprints</a>  -->
-		<li><a href="unittalk.html">Talks and Slides</a> <!-- <b><font color="red">(NEW)</font></b>  -->
-		<li><a href="link.html">Links</a>
-	</ul>
-
-	<div class="contents this_page">
-		<div class="content_layout">
-
-			</div>
-
-			<ul class="content_text">
-				<li><b>Email:</b><br/>
-					
-					<!--  caxa2602 &nbsp;"at" &nbsp;chiba-u.jp (until March 2021) or<br/>  -->
-					shinya.kumashiro &nbsp;"at" &nbsp;oit.ac.jp &nbsp; <br/>
-					<b>OR</b><br/>
-					shinyakumashiro &nbsp;"at" &nbsp;gmail.com<br/>
-					<!--
-					<br/>
-					skumashiro &nbsp;"at" &nbsp; oyama-ct.ac.jp <b><font color="red">(This email is no longer available!)</font></b><br/> 
-					-->
-				</li>
-
-				<li><b>Affiliation:</b><br/>       
-				Osaka Institute of Technology
-				
-				<!--  Department of Mathematics and Informatics,
-					Graduate School of Science and Engineering,
-					Chiba University, Japan  -->
-				</li>
-
-						<!--<div class="resizeimage">-->
-		<!--
-							<img src="data/toppicture.jpg" alt="Shinya Kumashiro" width="300">
-			</ul>
-		-->
-
-
-		<p class="text_right">
-			<script type="text/javascript">
-				document.write('Last update (mm/dd/yyyy):' + document.lastModified);
-			</script>
-			(GMT +09:00)
-			</p>
-
-
-		</div>  
-
-		
-
-
-	</div>
-
-
-
-  </body>
+    <p class="welcome">Welcome to Shinya Kumashiro's home page!</p>
+  </div>
+  <dl class="header-contact">
+    <div>
+      <dt>Email:</dt>
+      <dd>shinya.kumashiro &nbsp;"at" &nbsp;oit.ac.jp<br>
+        shinyakumashiro &nbsp;"at" &nbsp;gmail.com</dd>
+    </div>
+    <div>
+      <dt>Affiliation:</dt>
+      <dd>Osaka Institute of Technology</dd>
+    </div>
+  </dl>
+</header>
+<nav aria-label="Main navigation">
+<ul class="navi">
+  <li class="this_page"><a href="cv.html" aria-current="page">CV</a></li>
+  <li><a href="paper.html">Papers and Books</a></li>
+  <li><a href="unittalk.html">Talks and Slides</a></li>
+  <li><a href="link.html">Links</a></li>
+</ul>
+</nav>
+<main id="main-content" class="contents index-page">
+<h2 class="page-title"><a href="cv.html">CV</a></h2>
+</main>
+<footer class="site-footer">
+  Last update: <time id="last-updated" datetime="2026-10-06">2026-10-06</time>
+  <script>
+    (() => {
+      const modified = new Date(document.lastModified);
+      if (Number.isNaN(modified.getTime())) return;
+      const date = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit'
+      }).format(modified);
+      const element = document.getElementById('last-updated');
+      element.textContent = date;
+      element.dateTime = date;
+    })();
+  </script>
+</footer>
+</body>
 </html>
